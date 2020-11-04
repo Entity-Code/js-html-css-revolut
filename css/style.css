@@ -14,34 +14,66 @@ ul,li > a{
 
 
 header{
-   min-height: 100px;
+   min-height: 80px;
    border: solid 1px black;
 }
 .container-nav{
-   line-height: 80px;
+   padding: 30px 15px;
    display: flex;
    justify-content: space-between;
    flex-flow: row nowrap;
 }
 
-.ul-left > li:nth-child(1){
+.ul-left > li:nth-child(1) > a{
+   font-size: 25px;
    margin-right: 30px;
+}
+.ul-left > li:nth-child(2) > a {
+   color: black;
+}
+.ul-right{
+   margin-top: 4px;
 }
 .ul-right > li, .ul-left > li{
    display: inline-block;
 }
-.ul-right > li:nth-child(7) > a{
+.ul-right > li:nth-child(7) a{
+   text-decoration: none;
    padding: 10px 15px;
    background-color: #dd1f58;
    border-radius: 35px;
    color: white;
 }
-.ul-right > li:nth-child(7) > a:hover{
+.ul-right > li:nth-child(7) a:hover{
    opacity: 0.8;
 }
-.ul-left > li:nth-child(2) > a {
-   color: black;
-}
+
 ul > li > a:hover{
    color: black;
+}
+
+
+/* dropdown */
+.dropitem{
+   position: relative;
+}
+.dropdown{
+   display: none;
+   width: 140px;
+   box-shadow: 0px 4px 22px -12px rgba(0,0,0,0.75);
+   position: absolute;
+   top: 28px;
+   left: -15px;
+}
+.dropdown > li {
+   padding: 15px 5px;
+}
+.dropdown > li > a {
+   font-size: 18px;
+}
+
+
+/* js */
+.dBlock{
+   display: block;
 }
