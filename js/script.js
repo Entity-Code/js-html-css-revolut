@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 
-   $(".dropitem").click(function () {
+   $(".dropitem>a").click(function () {
       $(".dropdown").each(function () {
          $(this).toggleClass("dBlock");
       });
