@@ -2,12 +2,15 @@ $(document).ready(function () {
 
 
    $(".dropitem").click(function () {
-      $(this).find(".dropdown").toggleClass("dBlock");
+
+      if (!$(".dropdown").hasClass("dBlock")) {
+         $(this).find(".dropdown").addClass("dBlock");
+      } else {
+         $(".dropdown").removeClass("dBlock");
+         $(this).find(".dropdown").addClass("dBlock");
+      }
+
    });
-
-
-
-
 
 
 
