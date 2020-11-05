@@ -3,13 +3,17 @@ $(document).ready(function () {
 
    $(".dropitem").click(function () {
 
-      if (!$(".dropdown").hasClass("dBlock")) {
-         $(this).find(".dropdown").addClass("dBlock");
-      } else {
-         $(".dropdown").removeClass("dBlock");
-         $(this).find(".dropdown").addClass("dBlock");
-      }
+      // salvo indice del dropdown cliccato
+      var clicked = $(this).index();
+      //rimuovi dBlock a chi ha l'indice diverso da quello cliccato
+      $(".dropitem").each(function () {
+         if ($(this).index() !== clicked) {
+            $(this).find(".dropdown").removeClass("dBlock");
+         }
+      })
 
+      // on off sullo stesso dropdown
+      $(this).find(".dropdown").toggleClass("dBlock");
    });
 
 
